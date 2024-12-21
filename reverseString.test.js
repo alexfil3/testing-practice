@@ -1,6 +1,18 @@
 import reverseString from "./reverseString";
 
 test('return value should be a string', () => {
+    expect(reverseString(9)).toBe('Please enter a string');
+})
+
+test('string can not be empty', () => {
+    expect(reverseString('')).toBe('Your string should not be empty');
+})
+
+test('string can not be filled only with gaps', () => {
+    expect(reverseString('    ')).toBe('Your string should not be empty');
+})
+
+test('return value should be a string', () => {
     expect(reverseString('9')).toBe('9');
 })
 
